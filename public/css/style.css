@@ -1,0 +1,42 @@
+body,
+html {
+  height: 100%;
+}
+
+h1 {
+  font-size: 10em !important;
+  color: rgb(200, 206, 199) !important;
+}
+.logo {
+  height: 50px;
+  width: 50px;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  padding: 0 50px 0 50px;
+  background-color: rgba(255, 255, 255, 0.644);
+}
+
+*[class*="bandeau"] {
+  margin-bottom: 0;
+  display: flex;
+  padding-top: 100px;
+  margin-top: -30px;
+  justify-content: center;
+}
+
+.bandeau-Accueil {
+  background-image: url("https://www.affairesdegars.com/webroot/usr_img/2017-05/mai/semaine5/Pecheuse_sexy_image2.png");
+  background-size: cover;
+  min-height: 90vh;
+}
+
+.nav-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
