@@ -19,7 +19,6 @@ spl_autoload_register(function ($className) {
 
 if(isset($routes[$route])){
     list($controllerName,$methode) = $routes[$route];
-
     $controller = new $controllerName;
     $controller->$methode();
 }else {

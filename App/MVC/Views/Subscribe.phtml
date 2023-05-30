@@ -1,0 +1,25 @@
+<main class="vh-90">
+  <div class="container pt-5">
+    <h1>Formulaire d'inscription</h1>
+    <form>
+      <div class="form-group">
+        <label for="nom">Nom :</label>
+        <input type="text" class="form-control" id="nom" placeholder="Entrez votre nom" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email :</label>
+        <input type="email" class="form-control" id="email" placeholder="Entrez votre adresse email" required>
+      </div>
+      <div class="form-group">
+        <label for="motDePasse">Mot de passe :</label>
+        <input type="password" class="form-control" id="motDePasse" placeholder="Entrez votre mot de passe" required>
+      </div>
+      <div class="form-group">
+        <label for="confirmationMotDePasse">Confirmez le mot de passe :</label>
+        <input type="password" class="form-control" id="confirmationMotDePasse" placeholder="Confirmez votre mot de passe" required>
+      </div>
+      <button type="submit" class="btn btn-primary">S'inscrire</button>
+    </form>
+  </div>
+</main>
+<?php debug($_SERVER["REQUEST_URI"])?>

@@ -1,7 +1,19 @@
 <?php
 return [
-    '/'=>[
-        'Controllers\HomeController',
-        'index'
-    ]
+        '/'=>[
+            'Controllers\HomeController',
+            'index'
+        ],
+        '/index.php'=>[
+            'Controllers\HomeController',
+            'index'
+        ],
+        '/login'=>[
+            'Controllers\LoginController',
+            'login'
+        ],
+        '/subscribe'=>[
+            'Controllers\SubscribeController',
+            'subscribe'
+        ]
     ];
