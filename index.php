@@ -1,20 +1,32 @@
 <?php
 
-$hello = "COUCOU";
+require_once 'App/ToolBox/helpFunctions.php';
 
-?>
+//Recupere la route en cours
+$route = $_SERVER["REQUEST_URI"];
+//Recupere la liste des routes disponnibles pour 
+$routes = require 'App/Rooter/routes.php';
+
+// Autoloader
+// Fonction appelée lorsque l'on essaie d'instancier une classe avec un namespace
+spl_autoload_register(function ($className) {
+    // On change le sens des \ en /
+    $fileName = str_replace('\\', '/', $className);
+
+    // On inclut le fichier
+    require "App/MVC/$fileName.php";
+});
+
+if(isset($routes[$route])){
+    list($controllerName,$methode) = $routes[$route];
+
+    $controller = new $controllerName;
+    $controller->$methode();
+}else {
+    echo '<h1>PAge 404</h1>';
+}
 
 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1><?= $hello?></h1>
-</body>
-</html>
+
+

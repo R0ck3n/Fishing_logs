@@ -1,0 +1,80 @@
+/*Propriétés générales*/
+body,
+html {
+  height: 100%;
+}
+
+.accueil-titre {
+  font-size: 10em;
+  color: rgb(200, 206, 199);
+}
+.logo {
+  height: 50px;
+  width: 50px;
+}
+main {
+  padding: 50px;
+}
+
+/*Responsive */
+
+@media (max-width: 550px) {
+  .accueil-titre {
+    font-size: 2em;
+  }
+  .bandeau-Accueil {
+    min-height: 50vh !important;
+  }
+}
+
+/*Nav barre */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  padding: 0 50px 0 50px;
+  background-color: rgba(255, 255, 255, 0.644);
+}
+
+/*Sépare les liens des pages des liens de connection */
+.nav-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+/*Gestion du bandeau*/
+*[class*="bandeau"] {
+  margin-bottom: 0;
+  display: flex;
+  padding-top: 100px;
+  margin-top: -30px;
+  justify-content: center;
+}
+/*Défini l'image et la taille de celle ci*/
+/*Pour chaque page avec un bandeau créer une classe .bandeau-"nom de la page" et lui donner les propriétées désirées*/
+.bandeau-Accueil {
+  background-image: url("https://www.affairesdegars.com/webroot/usr_img/2017-05/mai/semaine5/Pecheuse_sexy_image2.png");
+  background-size: cover;
+  min-height: 90vh;
+}
+/*footer*/
+.alignement-ligne {
+  display: flex;
+  margin-left: 50px;
+  align-items: center;
+}
+.footer-text {
+  color: white;
+}
+
+/*gestion de l'img*/
+
+.btn-footer img {
+  max-height: 75px;
+  max-width: 75px;
+  display: flex;
+  align-items: center;
+  margin: 50px;
+}
