@@ -19,11 +19,10 @@ spl_autoload_register(function ($className) {
 
 if(isset($routes[$route])){
     list($controllerName,$methode) = $routes[$route];
-
     $controller = new $controllerName;
     $controller->$methode();
 }else {
-    echo '<h1>PAge 404</h1>';
+    echo '<h1>Page 404</h1>';
 }
 
 
