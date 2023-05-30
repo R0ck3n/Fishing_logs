@@ -8,6 +8,14 @@ return [
             'Controllers\HomeController',
             'index'
         ],
+        '/history'=>[
+            'Controllers\HistoryController',
+            'history'
+        ],
+        '/contact'=>[
+            'Controllers\ContactController',
+            'contact'
+        ],
         '/login'=>[
             'Controllers\LoginController',
             'login'

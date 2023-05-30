@@ -22,7 +22,7 @@ if(isset($routes[$route])){
     $controller = new $controllerName;
     $controller->$methode();
 }else {
-    echo '<h1>PAge 404</h1>';
+    echo '<h1>Page 404</h1>';
 }
 
 
