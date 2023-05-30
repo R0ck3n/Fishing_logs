@@ -8,7 +8,7 @@ class DisplayController {
      * de pouvoir les modifier si besoin.
      * la variable permettra juste de passer des paramettre suplémentaire 
      */
-    public function display(string $template, array $data = [], string $header='header', string $footer='footer'){
+    public function display(string $template, array $data = [],string $bandeau="bandeau", string $navBar='navbarre', string $footer='footer'){
         // Transforme les clés du tableau $data en variable
         extract($data);
 

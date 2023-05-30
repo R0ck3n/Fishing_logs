@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><?=$title?></title>
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/public/img/logo.png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="/public/css/style.css">
     <script type="module" src="/public/js/main.js" defer></script>
@@ -13,24 +13,20 @@
   </head>
   <body>
 
-    <header>   
-      <?php require $header.'.phtml' ?>
-                <!-- Image bandeau-->
-                <div class="bandeau-<?=$title?>">
-        <h1 class="h1">Fishing logs </h1>
-    </div>
+    <header id="top-header">   
+      <!-- par défault navbarre.phtml peut être modifier lors de l'appel de la fonction display du controller-->
+      <?php require $navBar.'.phtml' ?>
+      <!-- Bandeau qui apparait suivant le titre de la page ( img en background dans le css a définir suivant le titre de la page) -->
+      <?php if ($title==="Accueil"){require $bandeau.'.phtml';}?>
     </header>
 
 
-
-
-    <main>
+      <!-- contenu a définir obligatoirement dans le controller de la page -->
       <?php require $template . '.phtml' ?>
-    </main>
 
-    <footer>
+
+      <!-- par défault footer.phtml peut être modifier lors de l'appel de la fonction display du controller-->
       <?php require $footer.'.phtml' ?>
-    </footer>
 
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
