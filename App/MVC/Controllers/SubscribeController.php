@@ -1,11 +1,11 @@
 <?php
 
-namespace Controllers;
+namespace MVC\Controllers;
 
 
 
 class SubscribeController extends DisplayController{
-    public function subscribe():void {
+    public function subscribeDisplay():void {
         $this->display('Subscribe',[
             'title' =>'Subscribe',
         ]);

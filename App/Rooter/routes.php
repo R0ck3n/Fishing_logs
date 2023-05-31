@@ -1,27 +1,31 @@
 <?php
 return [
         '/'=>[
-            'Controllers\HomeController',
+            'MVC\Controllers\HomeController',
             'index'
         ],
         '/index.php'=>[
-            'Controllers\HomeController',
+            'MVC\Controllers\HomeController',
             'index'
         ],
         '/history'=>[
-            'Controllers\HistoryController',
+            'MVC\Controllers\HistoryController',
             'history'
         ],
         '/contact'=>[
-            'Controllers\ContactController',
+            'MVC\Controllers\ContactController',
             'contact'
         ],
         '/login'=>[
-            'Controllers\LoginController',
+            'MVC\Controllers\LoginController',
             'login'
         ],
         '/subscribe'=>[
-            'Controllers\SubscribeController',
+            'MVC\Controllers\SubscribeController',
+            'subscribeDisplay'
+        ],
+        '/subscribeForm'=>[
+            'MVC\Controllers\SubscribeFormController',
             'subscribe'
-        ]
+        ],
     ];

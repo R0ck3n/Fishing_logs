@@ -1,25 +1,44 @@
 <main class="vh-90">
   <div class="container pt-5">
     <h1>Formulaire d'inscription</h1>
-    <form>
+    <form action="/subscribeForm" method="POST">
       <div class="form-group">
-        <label for="nom">Nom :</label>
-        <input type="text" class="form-control" id="nom" placeholder="Entrez votre nom" required>
+        <label for="lastname">Nom :</label>
+        <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Entrez votre lastname" required>
+      </div>
+      <div class="form-group">
+        <label for="firstname">Prenom :</label>
+        <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Entrez votre firstname" required>
       </div>
       <div class="form-group">
         <label for="email">Email :</label>
-        <input type="email" class="form-control" id="email" placeholder="Entrez votre adresse email" required>
+        <input type="email" class="form-control" id="email" name="email" placeholder="Entrez votre adresse email" required>
+      </div>
+      <div class="form-group subscribe-radio">
+        <label>Sexe :</label>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="sex" id="homme" value="homme" required>
+          <label class="form-check-label" for="homme">Homme</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="sex" id="femme" value="femme" required>
+          <label class="form-check-label" for="femme">Femme</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="dateNaissance">Date de naissance :</label>
+        <input type="date" class="form-control" id="dateNaissance" name="birthday" placeholder="Entrez votre date de naissance" required>
       </div>
       <div class="form-group">
         <label for="motDePasse">Mot de passe :</label>
-        <input type="password" class="form-control" id="motDePasse" placeholder="Entrez votre mot de passe" required>
+        <input type="password" class="form-control" id="motDePasse" name="password" placeholder="Entrez votre mot de passe" required>
       </div>
       <div class="form-group">
         <label for="confirmationMotDePasse">Confirmez le mot de passe :</label>
-        <input type="password" class="form-control" id="confirmationMotDePasse" placeholder="Confirmez votre mot de passe" required>
+        <input type="password" class="form-control" id="confirmationMotDePasse" name="passwordCheck" placeholder="Confirmez votre mot de passe" required>
       </div>
       <button type="submit" class="btn btn-primary">S'inscrire</button>
     </form>
   </div>
 </main>
-<?php debug($_SERVER["REQUEST_URI"])?>
+<?php debug($_POST)?>

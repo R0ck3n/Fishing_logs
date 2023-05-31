@@ -1,4 +1,5 @@
 <?php
+use App\DB\DBconnection;
 
 require_once 'App/ToolBox/helpFunctions.php';
 
@@ -12,9 +13,9 @@ $routes = require 'App/Rooter/routes.php';
 spl_autoload_register(function ($className) {
     // On change le sens des \ en /
     $fileName = str_replace('\\', '/', $className);
-
     // On inclut le fichier
-    require "App/MVC/$fileName.php";
+    require "App/$fileName.php";
+    
 });
 
 if(isset($routes[$route])){

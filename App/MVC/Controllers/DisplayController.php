@@ -1,5 +1,5 @@
 <?php
-namespace Controllers;
+namespace MVC\Controllers;
 
 class DisplayController {
     /**
