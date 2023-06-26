@@ -3,6 +3,10 @@ use App\DB\DBconnection;
 
 require_once 'App/ToolBox/helpFunctions.php';
 
+// Démarrage de la session
+session_start();
+
+
 //Recupere la route en cours
 $route = $_SERVER["REQUEST_URI"];
 //Recupere la liste des routes disponnibles pour 

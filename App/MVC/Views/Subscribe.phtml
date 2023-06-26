@@ -1,14 +1,20 @@
 <main class="vh-90">
   <div class="container pt-5">
+  <?php if (isset($_SESSION['errors'])): ?>
+    <div>
+      <?php errorMsg($_SESSION['errors'])?>
+    </div>
+  <?php endif;?>
+
     <h1>Formulaire d'inscription</h1>
     <form action="/subscribeForm" method="POST">
       <div class="form-group">
         <label for="lastname">Nom :</label>
-        <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Entrez votre lastname" required>
+        <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Entrez votre nom de famille" required>
       </div>
       <div class="form-group">
         <label for="firstname">Prenom :</label>
-        <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Entrez votre firstname" required>
+        <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Entrez votre prenom" required>
       </div>
       <div class="form-group">
         <label for="email">Email :</label>
@@ -41,4 +47,3 @@
     </form>
   </div>
 </main>
-<?php debug($_POST)?>
